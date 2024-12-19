@@ -1,0 +1,97 @@
+<!-- Navbar (navbar.ejs) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="/images/main-logo.png" alt="Logo" class="d-inline-block align-top" style="height: 80px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/discover">Discover</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plan Your Trip</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/ai-trip-planner">AI Trip Planner</a></li>
+          <li><a class="dropdown-item" href="/group-trip">Group Trip</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="/review">Review</a></li>
+      <li class="nav-item dropdown">
+        <!-- <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a> -->
+        <!-- <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+          <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        </ul> -->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Navbar Styling -->
+<style>
+  .navbar {
+    color: black;
+    background-color: #343a40;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand img {
+    height: 70px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #ff0000 !important;
+ 
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #343a40;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .navbar-toggler {
+    border-color: #007bff;
+  }
+
+
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 0;
+    }
+    .navbar-nav .nav-link {
+      font-size: 1.2rem;
+    }
+  }
+</style>
