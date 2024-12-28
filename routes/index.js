@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 
 /* GET home page. */
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: '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',
   baseURL: 'https://integrate.api.nvidia.com/v1', // Base URL from your provided code
 });
 
@@ -78,16 +78,18 @@ router.get('/ai-trip-planner', (req, res) => {
 });
 
 router.post('/ai-trip-planner', async (req, res) => {
-  const { place, numPeople, numDays } = req.body;
+  const { place, numPeople, numDays} = req.body;
+  const distance = "calculate the distance from one place to another";
 
-  const tripPrompt = `Plan a trip for ${numPeople} people to ${place} for ${numDays} days. Give activities days wise in new line without any star, give it in a good format.`;
+  const tripPrompt = `Plan a trip for ${numPeople} people to ${destination} from ${origin} for ${numDays} days. The travel distance from one place to another in km. 
+  Give activities day-wise in new line without any star, and give it in a well-formatted way.`;
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "meta/llama2-70b",
+      model: "meta/llama3-70b-instruct",
       messages: [{ role: "user", content: tripPrompt }],
-      temperature: 0.7,
-      max_tokens: 1000,
+      temperature: 0.5,
+      max_tokens: 1024,
     });
 
     const tripPlan = completion.choices[0].message.content;
