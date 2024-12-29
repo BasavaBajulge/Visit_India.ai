@@ -79,10 +79,8 @@ router.get('/ai-trip-planner', (req, res) => {
 
 router.post('/ai-trip-planner', async (req, res) => {
   const { place, numPeople, numDays} = req.body;
-  const distance = "calculate the distance from one place to another";
 
-  const tripPrompt = `Plan a trip for ${numPeople} people to ${destination} from ${origin} for ${numDays} days. The travel distance from one place to another in km. 
-  Give activities day-wise in new line without any star, and give it in a well-formatted way.`;
+  const tripPrompt = `Plan a trip for ${numPeople} people to ${place} for ${numDays} days. Give activities days wise in new line without any star and also give distance in km from one place to another, give it in a good format.`;
 
   try {
     const completion = await openai.chat.completions.create({
