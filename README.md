@@ -6,11 +6,10 @@ Explore the diverse and rich culture of India with the Visit India project. This
 
 ## Features
 - **AI Trip Planner**: Leverage cutting-edge AI for personalized trip recommendations.
-- **Dynamic EJS Templating**: Build dynamic views using EJS.
 - **Seamless Email Integration**: Send trip itineraries directly via email.
 - **Real-Time Data**: Fetch real-time distances and travel details.
 - **User-Friendly Navigation**: Interactive and intuitive user experience.
-
+- **Feedback**: Collect user feedback to improve the application.
 ---
 
 ## Prerequisites
