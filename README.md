@@ -72,18 +72,6 @@ The project utilizes the following Node.js dependencies:
 
 ---
 
-## Project Structure
-```
-visit-india/
-├── views/                 # EJS templates
-├── routes/                # Express route handlers
-├── public/                # Static files (CSS, JS, Images)
-├── node_modules/          # Installed dependencies
-├── app.js                 # Entry point of the application
-├── package.json           # Project metadata and dependencies
-└── README.md              # Project documentation
-```
-
 ---
 
 ## Contact
