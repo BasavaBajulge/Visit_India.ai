@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 
 /* GET home page. */
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: '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',
   baseURL: 'https://integrate.api.nvidia.com/v1', // Base URL from your provided code
 });
 
